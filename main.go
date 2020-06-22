@@ -56,7 +56,7 @@ func destroy() {
 func start() {
 	for _, vms := range VmData.VmProperties {
 		pvm := makeVM{vmName: vms.VMName}
-		fmt.Printf("Starting: %s", vms.VMName)
+		fmt.Printf("Starting: %s\n", vms.VMName)
 		pvm.powerONVM()
 	}
 }
@@ -64,7 +64,7 @@ func start() {
 func turnoff() {
 	for _, vms := range VmData.VmProperties {
 		pfvm := makeVM{vmName: vms.VMName}
-		fmt.Printf("Powering Off: %s", vms.VMName)
+		fmt.Printf("Powering Off: %s\n", vms.VMName)
 		pfvm.powerOffVM()
 	}
 }
@@ -72,7 +72,7 @@ func turnoff() {
 func reboot() {
 	for _, vms := range VmData.VmProperties {
 		prvm := makeVM{vmName: vms.VMName}
-		fmt.Printf("Rebooting: %s", vms.VMName)
+		fmt.Printf("Rebooting: %s\n", vms.VMName)
 		prvm.rebootVM()
 	}
 }
