@@ -1,0 +1,62 @@
+vCenterDetails:
+  vmUrl: devvc66dr.sanovi.com
+  vmUsername:  lakshya@sanovi.com
+  vmPassword: S3cEPqddQcJs6Bmq
+  vmInsecure: 1
+  vmDatastore: Datastore_for_vms_192_8_55
+  vmDatacenter: mcmpclouddc
+  vmFolder: one
+vmCloneProperties:
+  rhcosTemplate: rhcos-4.3.0
+  cpuNumber: 4
+  memoryMB: 16384
+  diskSizeGB: 120
+vmProperties:
+  - vmName: bootstrap
+    netInterface: ens192
+    ipAddress: 192.168.8.43
+    defaultGateway: 192.168.8.254
+    dns: 192.168.8.229
+    ipInterfaceName: 00-ens192.network
+    macAddress: 00:50:56:00:00:43
+    ignFile : append-bootstrap.ign
+  - vmName: master01
+    netInterface: ens192
+    ipAddress: 192.168.8.45
+    defaultGateway: 192.168.8.254
+    dns: 192.168.8.229
+    ipInterfaceName: 00-ens192.network
+    macAddress: 00:50:56:00:00:45
+    ignFile : master.ign
+  - vmName: master02
+    netInterface: ens192
+    ipAddress: 192.168.8.46
+    defaultGateway: 192.168.8.254
+    dns: 192.168.8.229
+    ipInterfaceName: 00-ens192.network
+    macAddress: 00:50:56:00:00:46
+    ignFile : master.ign
+  - vmName: master03
+    netInterface: ens192
+    ipAddress: 192.168.8.47
+    defaultGateway: 192.168.8.254
+    dns: 192.168.8.229
+    ipInterfaceName: 00-ens192.network
+    macAddress: 00:50:56:00:00:47
+    ignFile : master.ign
+  - vmName: worker01
+    netInterface: ens192
+    ipAddress: 192.168.8.48
+    defaultGateway: 192.168.8.254
+    dns: 192.168.8.229
+    ipInterfaceName: 00-ens192.network
+    macAddress: 00:50:56:00:00:48
+    ignFile : worker.ign
+  - vmName: worker02
+    netInterface: ens192
+    ipAddress: 192.168.8.49
+    defaultGateway: 192.168.8.254
+    dns: 192.168.8.229
+    ipInterfaceName: 00-ens192.network
+    macAddress: 00:50:56:00:00:49
+    ignFile : worker.ign
