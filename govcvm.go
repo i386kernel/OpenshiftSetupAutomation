@@ -50,7 +50,8 @@ func (mv *makeVM) createVM() {
 }
 
 func (mv *makeVM) powerONVM() {
-	cmd := exec.Command("bash", "-c", "govc", "vm.power", "-on", mv.vmName)
+	vmon := fmt.Sprintf(`govc vm.power -on %s`, mv.vmName)
+	cmd := exec.Command("/bin/bash", "-c", vmon)
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println(err)
@@ -58,7 +59,8 @@ func (mv *makeVM) powerONVM() {
 }
 
 func (mv *makeVM) powerOffVM() {
-	cmd := exec.Command("bash", "-c", "govc", "vm.power", "-off", "-force", mv.vmName)
+	vmoff := fmt.Sprintf(`govc vm.power -off -force %s`, mv.vmName)
+	cmd := exec.Command("/bin/bash", "-c", vmoff)
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println(err)
@@ -66,7 +68,8 @@ func (mv *makeVM) powerOffVM() {
 }
 
 func (mv *makeVM) rebootVM() {
-	cmd := exec.Command("bash", "-c", "govc", "vm.power", "-r", mv.vmName)
+	rbvm := fmt.Sprintf(`govc vm.power -r %s`, mv.vmName)
+	cmd := exec.Command("/bin/bash", "-c", rbvm)
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println(err)
