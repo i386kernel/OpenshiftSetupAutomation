@@ -1,11 +1,11 @@
 vCenterDetails:
-  vmUrl: devvc66dr.sanovi.com
-  vmUsername:  lakshya@sanovi.com
-  vmPassword: S3cEPqddQcJs6Bmq
+  vmUrl: <Change_ME>
+  vmUsername:  <Change_ME>
+  vmPassword: <Change_ME>
   vmInsecure: 1
-  vmDatastore: Datastore_for_vms_192_8_55
-  vmDatacenter: mcmpclouddc
-  vmFolder: one
+  vmDatastore: <Change_ME>
+  vmDatacenter: <Change_ME>
+  vmFolder: <Change_ME>
 vmCloneProperties:
   rhcosTemplate: rhcos-4.3.0
   cpuNumber: 4
