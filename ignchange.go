@@ -1,4 +1,4 @@
-package openShiftSetup
+package main
 
 import (
 	"encoding/base64"

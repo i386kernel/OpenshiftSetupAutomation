@@ -1,1 +1,1 @@
-package openShiftSetup
+package main
