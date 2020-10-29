@@ -1,4 +1,4 @@
 # OpenshiftSetupAutomation
-Automation of Openshift Setup 4.x UPI
-
-Change "vm.yaml" file to suit your onprem infra. 
+* Automation of Openshift 4.x UPI Setup. F
+* Fill the 'vm.yaml' according to the available infra.
+* Use available binary to trigger the setup.  
